@@ -1,103 +1,150 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Soluciones Integrales JYS</title>
 
 <style>
 
-body{
-font-family: Arial;
+/* RESET */
+*{
 margin:0;
-background:#f4f4f4;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
-/* HEADER */
+/* BODY */
+body{
+background:linear-gradient(135deg,#0f172a,#1e3a5f);
+color:white;
+}
 
+/* NAVBAR */
 header{
-background:#1e3a5f;
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
 padding:15px;
 text-align:center;
-color:white;
+z-index:1000;
 }
 
-/* PORTADA */
-
+/* HERO */
 .hero{
-background:#1e3a5f;
 text-align:center;
-padding:60px 20px;
-color:white;
+padding:120px 20px 80px;
+animation:fadeIn 1.5s ease;
 }
 
 .hero img{
-width:250px;
+width:180px;
+margin-bottom:20px;
+animation:float 3s infinite ease-in-out;
+}
+
+.hero h2{
+font-size:2.5rem;
+margin-bottom:15px;
+}
+
+.hero p{
+opacity:0.9;
 margin-bottom:20px;
 }
 
 /* BOTON */
-
 .btn{
-background:#f9b233;
-padding:14px 25px;
+background:linear-gradient(45deg,#f9b233,#ffd700);
+padding:15px 30px;
 color:black;
 text-decoration:none;
 font-weight:bold;
-border-radius:6px;
-display:inline-block;
-margin-top:10px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 15px #ffd700;
+}
+
+/* SECCIONES */
+section{
+padding:80px 20px;
+text-align:center;
 }
 
 /* SERVICIOS */
-
-section{
-padding:50px;
-text-align:center;
-}
-
 .servicios{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:30px;
 }
 
 .servicio{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:15px;
+transition:0.4s;
+}
+
+.servicio:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.servicio h3{
+margin-bottom:10px;
+color:#ffd700;
 }
 
 /* CONTACTO */
-
 .contacto{
-background:#1e3a5f;
-color:white;
+background:rgba(0,0,0,0.4);
 }
 
 /* FOOTER */
-
 footer{
 background:black;
-color:white;
-text-align:center;
-padding:10px;
+padding:15px;
 }
 
 /* WHATSAPP */
-
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:16px;
+padding:18px;
 border-radius:50%;
 text-decoration:none;
-font-size:22px;
+font-size:24px;
+box-shadow:0 0 10px #25D366;
+animation:pulse 2s infinite;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 10px #25D366;}
+50%{box-shadow:0 0 25px #25D366;}
+100%{box-shadow:0 0 10px #25D366;}
 }
 
 </style>
@@ -106,21 +153,21 @@ font-size:22px;
 <body>
 
 <header>
-<h1>Soluciones Integrales JYS</h1>
+<h1>⚡ Soluciones Integrales JYS</h1>
 </header>
 
 <section class="hero">
 
-<img src="logo-jys.png" alt="Logo JYS">
+<img src="logo-jys.png" alt="Logo">
 
-<h2>Mantenimiento y servicios para hogares y empresas</h2>
+<h2>Servicios profesionales para tu hogar y empresa</h2>
 
-<p>Reparaciones, jardinería, fontanería, electricidad y más.</p>
+<p>Electricidad, jardinería, fontanería, pintura y mucho más</p>
 
 <a class="btn"
-href="https://wa.me/573113580101?text=Hola%20quiero%20agendar%20un%20mantenimiento"
+href="https://wa.me/573113580101?text=Hola%20quiero%20agendar%20un%20servicio"
 target="_blank">
-Agendar mantenimiento
+💬 Agendar por WhatsApp
 </a>
 
 </section>
@@ -132,33 +179,33 @@ Agendar mantenimiento
 <div class="servicios">
 
 <div class="servicio">
-<h3>Reparaciones</h3>
-<p>Arreglos locativos y mantenimiento general.</p>
+<h3>🔧 Reparaciones</h3>
+<p>Mantenimiento y arreglos generales.</p>
 </div>
 
 <div class="servicio">
-<h3>Jardinería</h3>
-<p>Mantenimiento de zonas verdes.</p>
+<h3>🌿 Jardinería</h3>
+<p>Cuidado de zonas verdes.</p>
 </div>
 
 <div class="servicio">
-<h3>Fontanería</h3>
+<h3>🚿 Fontanería</h3>
 <p>Reparación de tuberías.</p>
 </div>
 
 <div class="servicio">
-<h3>Electricidad</h3>
-<p>Instalaciones eléctricas.</p>
+<h3>⚡ Electricidad</h3>
+<p>Instalaciones seguras.</p>
 </div>
 
 <div class="servicio">
-<h3>Pintura</h3>
-<p>Pintura interior y exterior.</p>
+<h3>🎨 Pintura</h3>
+<p>Interior y exterior.</p>
 </div>
 
 <div class="servicio">
-<h3>Construcción</h3>
-<p>Obra blanca y remodelaciones.</p>
+<h3>🏗️ Construcción</h3>
+<p>Remodelaciones y obra.</p>
 </div>
 
 </div>
@@ -167,26 +214,23 @@ Agendar mantenimiento
 
 <section class="contacto">
 
-<h2>Contacto</h2>
+<h2>Contáctanos</h2>
 
 <p>📞 3113580101</p>
-
 <p>📧 johannygilcardenas3@gmail.com</p>
+<p>📍 Pereira - Colombia</p>
 
 </section>
 
 <footer>
-
 <p>© 2026 Soluciones Integrales JYS</p>
-
 </footer>
 
 <a class="whatsapp"
-href="https://wa.me/573113580101?text=Hola%20quiero%20información%20de%20servicios"
+href="https://wa.me/573113580101?text=Hola%20quiero%20información"
 target="_blank">
 💬
 </a>
 
 </body>
 </html>
-```
